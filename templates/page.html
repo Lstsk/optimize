@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1><tt>Optimize It</tt></h1>
+    <h2><tt>Max Volume of Popcorn Box</tt></h2>
+    <form action="/", method="POST">  
+      <label for="length"><tt>Length</tt></label>
+      <input name="length" type="number" step="any" required>
+      <label for="width"><tt>Width</tt></label>
+      <input name="width" type="number" step="any" required>
+      <input type="submit" value="GET" style="margin-top:10px; padding: 10px" style="font-family:verdana;">
+    </form>
+    <h3>Result:</h3>
+<code class="prettyprint">
+  {% if dataout  %}
+  {% for items, value in dataout.items() %}
+    <div>{{items}} = {{value}}</div> </br>
+  {% endfor %}
+  {% endif %}
+</code>
+    
+  </body>
+</html>
