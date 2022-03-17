@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 
-app = Flask("app")
+app = Flask(__name__)
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 app.config["JSON_SORT_KEYS"] = False
 
@@ -93,5 +93,3 @@ def get_volume(x_1, x_2):
         [x_1 * (8.5 - 2 * x_1) * (11 - 2 * x_1), x_2 * (8.5 - 2 * x_2) * (11 - 2 * x_2)]
     )
 
-
-app.run(host="0.0.0.0", port=8080)
